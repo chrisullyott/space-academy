@@ -120,7 +120,8 @@ class Battle
 
         void static defeat()
         {
-            Screen::out("You were defeated! Now you'll have to hobble back to the station on impulse power :(");
+            Screen::out("You were defeated!");
+            Screen::out("Now you'll have to hobble back to the station on impulse power :(");
         }
 
         void static retreat()
