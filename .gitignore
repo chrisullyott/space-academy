@@ -1,0 +1,9 @@
+# PROJECT #
+###########
+notes
+examples/*
+a.out
+
+# SYSTEM #
+##########
+.DS_Store
