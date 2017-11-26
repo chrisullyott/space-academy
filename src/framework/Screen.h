@@ -10,8 +10,8 @@ class Screen
 
         static void clear()
         {
-            for (int n = 0; n < 10; n++) {
-                printf("\n\n\n\n\n\n\n\n\n\n");
+            for (int n = 0; n < 80; n++) {
+                printf("\n");
             }
         }
 };

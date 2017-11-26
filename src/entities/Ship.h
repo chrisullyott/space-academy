@@ -3,9 +3,11 @@ using namespace std;
 class Ship
 {
     public:
-        // Properties.
+        // Constants.
         static const int MIN_SHIELDS = 0;
         static const int MAX_SHIELDS = 100;
+
+        // Properties.
         int shields;
         int agility;
         int resilience;
