@@ -107,7 +107,7 @@ class Game
             TamronWarship *enemyShip = new TamronWarship(enemyPilot);
 
             sleep(8);
-            Screen::out("Holy crap, an enemy warship is approaching!");
+            Screen::out("RED ALERT! Enemy warship approaching!");
             sleep(2);
             Screen::out("It's " + enemyShip->getPilotName() + " piloting a Tamron Warship!");
 
