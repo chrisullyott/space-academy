@@ -3,9 +3,11 @@ using namespace std;
 class Question : public Query
 {
     public:
+        // Properties.
         string prompt;
         string choice;
 
+        // Constructor.
         Question(string prompt)
         {
             this->prompt = prompt;

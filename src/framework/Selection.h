@@ -3,12 +3,13 @@ using namespace std;
 class Selection : public Query
 {
     public:
+        // Properties.
         string prompt;
         string *options;
-
         int size;
         int choice;
 
+        // Constructor.
         Selection(string prompt, string *options, int size)
         {
             this->prompt = prompt;

@@ -3,17 +3,16 @@ using namespace std;
 class Ship
 {
     public:
-        // Common.
+        // Properties.
         static const int MIN_SHIELDS = 0;
         static const int MAX_SHIELDS = 100;
         int shields;
-
-        // Variable.
-        Character *pilot;
         int agility;
         int resilience;
         int weapon;
+        Character *pilot;
 
+        // Constructor.
         Ship()
         {
             this->shields = MAX_SHIELDS;

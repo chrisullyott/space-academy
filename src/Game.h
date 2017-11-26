@@ -1,28 +1,14 @@
-#include <iostream>
-#include <string>
-#include <unistd.h>
-
-#include "Screen.h"
-#include "Intro.h"
-#include "Query.h"
-#include "Question.h"
-#include "Selection.h"
-#include "Character.h"
-#include "Ship.h"
-#include "ships/CargoBarge.h"
-#include "ships/GammaFlyer.h"
-#include "ships/TamronWarship.h"
-#include "Battle.h"
-
 using namespace std;
 
 class Game
 {
     public:
+        // Properties.
         Character *hero;
         Ship *ship;
         string planet;
 
+        // Constructor.
         Game()
         {
             this->hero = new Character();
@@ -127,43 +113,6 @@ class Game
 
             Battle battle(this->ship, enemyShip);
             battle.engage();
-        }
-
-        void askMarket()
-        {
-            cout << "You're feeling a bit peckish.\n";
-
-            string text = "Want to make a pit stop at the market?";
-            string o[2] = {
-                "Yes",
-                "No"
-            };
-
-            Selection s(text, o, 2);
-            int a = s.ask().get();
-
-            switch(a) {
-                case 0:
-                    this->askMarketItems();
-                    break;
-                case 1:
-                    cout << "Well, your peckishness turned into full-blown hangry-itis,\n";
-                    cout << "and you were unable to complete your training. Jeez!\n";
-                    this->end();
-                    break;
-            }
-        }
-
-        void askMarketItems()
-        {
-            cout << "You find yourself at an asian market. What looks good?\n";
-
-            string o[3] = {
-                "Bulgogi beef",
-                "Hagfish",
-                "Kimchi ramen"
-            };
-
         }
 
         void end()
