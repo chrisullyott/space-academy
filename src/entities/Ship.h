@@ -8,6 +8,7 @@ class Ship
         static const int MAX_SHIELDS = 100;
 
         // Properties.
+        string name;
         int shields;
         int agility;
         int resilience;
@@ -18,6 +19,11 @@ class Ship
         Ship()
         {
             this->shields = MAX_SHIELDS;
+        }
+
+        string getName()
+        {
+            return this->name;
         }
 
         string getPilotName()
