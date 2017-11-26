@@ -22,6 +22,7 @@ class Game
             this->askName();
             this->askPlanet();
             this->askShip();
+            this->launch();
             this->doBattle();
 
             this->end();
@@ -40,12 +41,36 @@ class Game
             Screen::out(r);
         }
 
+        void askPlanet()
+        {
+            string text = "Where would you like to train?";
+            string planets[2] = {
+                "Neebus",
+                "Omnicron 3"
+            };
+
+            Selection s(text, planets, 2);
+            int a = s.ask().get();
+            this->planet = planets[a];
+
+            switch(a) {
+                case 0:
+                    Screen::out("Heh... the Neeb...");
+                    break;
+                case 1:
+                    Screen::out("Nice pick, " + this->hero->getName() + '.');
+                    break;
+            }
+
+            Screen::out("OK! You've arrived at " + this->planet + '.');
+        }
+
         void askShip()
         {
             string text = "Which ship do you choose?";
             string ships[2] = {
-                "gamma flyer",
-                "cargo barge"
+                "Gamma Flyer",
+                "Cargo Barge"
             };
 
             Selection s(text, ships, 2);
@@ -73,31 +98,18 @@ class Game
             }
 
             Screen::out(r);
-
         }
 
-        void askPlanet()
+        void launch()
         {
-            string text = "Where would you like to train?";
-            string planets[2] = {
-                "Neebus",
-                "Omnicron 3"
-            };
+            sleep(2);
 
-            Selection s(text, planets, 2);
-            int a = s.ask().get();
-            this->planet = planets[a];
+            string r = "OK! You're headed out in your " + this->ship->getName();
+            r += ". Good luck, " + this->hero->getName() + "!";
 
-            switch(a) {
-                case 0:
-                    Screen::out("Heh... the Neeb...");
-                    break;
-                case 1:
-                    Screen::out("Nice pick, " + this->hero->getName() + '.');
-                    break;
-            }
+            Screen::out(r);
 
-            Screen::out("OK! You've arrived at " + this->planet + '.');
+            sleep (2);
         }
 
         void doBattle()
@@ -106,9 +118,7 @@ class Game
             enemyPilot->setName("R-Z4");
             TamronWarship *enemyShip = new TamronWarship(enemyPilot);
 
-            sleep(8);
             Screen::out("RED ALERT! Enemy warship approaching!");
-            sleep(2);
             Screen::out("It's " + enemyShip->getPilotName() + " piloting a Tamron Warship!");
 
             Battle battle(this->ship, enemyShip);
