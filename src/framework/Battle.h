@@ -125,7 +125,8 @@ class Battle
 
         void static retreat()
         {
-            Screen::out("You gave up! Don't worry, I'll still sit next to you in the mess hall.");
+            Screen::out("You gave up!");
+            Screen::out("Don't worry, the academy likes their ships intact ;)");
         }
 
         void static stalemate()
