@@ -1,4 +1,4 @@
-# Space Academy!
+# 🚀 Space Academy!
 
 A text-based game in C++.
 
@@ -8,4 +8,4 @@ To play, you can compile and run with the [GNU Compiler Collection](https://gcc.
 g++ main.cpp; ./a.out; 
 ```
 
-Be careful out there in space, ok? 🚀
+Be careful out there in space, ok?
