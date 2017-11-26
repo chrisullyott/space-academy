@@ -14,4 +14,12 @@ class Screen
                 printf("\n");
             }
         }
+
+        static void enterToContinue()
+        {
+            Screen::out("Press ENTER to continue...");
+
+            int c;
+            do c = getchar(); while ((c != '\n') && (c != EOF));
+        }
 };

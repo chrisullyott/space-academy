@@ -68,7 +68,6 @@ class Battle
             bool attack = !s.ask().get();
 
             if (attack) {
-                sleep(1);
                 return this->attack(this->hero, this->enemy);
             } else {
                 Battle::retreat();
@@ -78,13 +77,13 @@ class Battle
 
         bool enemyAttack()
         {
-            sleep(2);
-
             return this->attack(this->enemy, this->hero);
         }
 
         bool attack(Ship *player1, Ship *player2)
         {
+            sleep(1);
+
             // Calculate hit damage.
             float effectiveness = (100 - player2->getResilience()) / 100.0;
             float placement = Battle::randomPercent(90, 100);
@@ -97,10 +96,11 @@ class Battle
             if (hit) {
                 player2->subtractShields(damage);
                 Screen::out(player1->getPilotName() + " landed a shot on " + player2->getPilotName() + "'s ship.");
-
             } else {
                 Screen::out(player1->getPilotName() + " fired a shot, but missed.");
             }
+
+            sleep(2);
 
             return player1->getShields() && player2->getShields();
         }

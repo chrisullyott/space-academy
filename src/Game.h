@@ -98,6 +98,8 @@ class Game
             }
 
             Screen::out(r);
+
+            Screen::enterToContinue();
         }
 
         void launch()
@@ -109,7 +111,7 @@ class Game
 
             Screen::out(r);
 
-            sleep (2);
+            sleep(2);
         }
 
         void doBattle()
@@ -119,7 +121,9 @@ class Game
             TamronWarship *enemyShip = new TamronWarship(enemyPilot);
 
             Screen::out("RED ALERT! Enemy warship approaching!");
+            sleep(2);
             Screen::out("It's " + enemyShip->getPilotName() + " piloting a Tamron Warship!");
+            sleep(2);
 
             Battle battle(this->ship, enemyShip);
             battle.engage();

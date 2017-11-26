@@ -2,7 +2,9 @@
 #include <string>
 #include <cstdlib>
 #include <ctime>
+#include <limits>
 #include <unistd.h>
+#include <stdio.h>
 
 #include "src/entities/Character.h"
 #include "src/entities/Ship.h"
