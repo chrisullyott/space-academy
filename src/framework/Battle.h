@@ -129,7 +129,7 @@ class Battle
 
         void static retreat()
         {
-            Screen::out("You gave up!");
+            Screen::out("You retreated!");
             Screen::out("Don't worry, the academy likes their ships intact ;)");
         }
 
