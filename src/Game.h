@@ -89,7 +89,8 @@ class Game
 
             string r = "Your ship has " + to_string(this->ship->getAgility()) + " agility";
             r += " and " + to_string(this->ship->getResilience()) + " hull resilience.\n";
-            r += "Its cannons can dish out up to " + to_string(this->ship->getWeapon()) + " damage.\n";
+            r += "Its cannons can dish out up to " + to_string(this->ship->getWeapon()) + " damage,";
+            r += " if your shot lands.\n";
 
             if (this->ship->getResilience() > this->ship->getAgility()) {
                 r += "So yeah, it's tough, but kinda slow.";
