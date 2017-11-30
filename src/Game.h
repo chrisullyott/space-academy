@@ -95,7 +95,7 @@ class Game
             if (this->ship->getResilience() > this->ship->getAgility()) {
                 r += "So yeah, it's tough, but kinda slow.";
             } else {
-                r += "So yeah, it's fast, but can't take much of a beating, okay?";
+                r += "So yeah, it's fast, but can't take much of a beating.";
             }
 
             Screen::out(r);
