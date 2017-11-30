@@ -107,8 +107,11 @@ class Battle
 
         void stats()
         {
-            string r = "Your shields:  " + to_string(hero->getShields()) + "\n";
-            r += "Enemy shields: " + to_string(enemy->getShields());
+            string r = "SHIELDS\n";
+
+            r += this->hero->getPilotName() + ":\t" + to_string(this->hero->getShields());
+            r += "\n";
+            r += this->enemy->getPilotName() + ":\t" + to_string(this->enemy->getShields());
 
             Screen::out(r);
         }
