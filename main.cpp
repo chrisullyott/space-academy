@@ -17,8 +17,8 @@
 #include "src/framework/Query.h"
 #include "src/framework/Question.h"
 #include "src/framework/Selection.h"
-#include "src/framework/Battle.h"
 
+#include "src/Battle.h"
 #include "src/Game.h"
 
 using namespace std;
