@@ -8,7 +8,7 @@ class GammaFlyer : public Ship
             this->name = "Gamma Flyer";
             this->pilot = pilot;
             this->agility = 72;
-            this->resilience = 40;
+            this->resilience = 50;
             this->weapon = 24;
         }
 };
