@@ -104,14 +104,12 @@ class Game
 
         void launch()
         {
-            sleep(2);
-
             string r = "OK! You're headed out in your " + this->ship->getName();
             r += ". Good luck, " + this->hero->getName() + "!";
 
             Screen::out(r);
 
-            sleep(2);
+            sleep(3);
         }
 
         void doBattle()
