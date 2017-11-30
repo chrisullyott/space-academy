@@ -8,7 +8,7 @@ class CargoBarge : public Ship
             this->name = "Cargo Barge";
             this->pilot = pilot;
             this->agility = 30;
-            this->resilience = 70;
+            this->resilience = 60;
             this->weapon = 20;
         }
 };
