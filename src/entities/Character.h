@@ -6,19 +6,16 @@ class Character
         // Constants.
         static const int MIN_HEALTH = 0;
         static const int MAX_HEALTH = 100;
-        static const int PER_DIEM = 20;
 
         // Properties.
         string name;
         int health;
-        float money;
 
         // Constructor.
         Character()
         {
             this->name = "Player 1";
             this->health = MAX_HEALTH;
-            this->money = PER_DIEM;
         }
 
         Character& setName(string name)
@@ -58,30 +55,5 @@ class Character
         int getHealth()
         {
             return this->health;
-        }
-
-        Character& addMoney(float value)
-        {
-            this->money += value;
-
-            return *this;
-        }
-
-        Character& subtractMoney(float value)
-        {
-            if ((this->money - value) < 0) {
-                cout << "Can't spend " << value;
-                cout << ", you only have ";
-                cout << this->money << ".\n";
-            } else {
-                this->money -= value;
-            }
-
-            return *this;
-        }
-
-        int getMoney()
-        {
-            return this->money;
         }
 };
