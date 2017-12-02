@@ -4,7 +4,7 @@ A text-based game in C++.
 
 ## Play
 
-To play, you can compile and run with the [GNU Compiler Collection](https://gcc.gnu.org/):
+To play, compile and run "main.cpp". You could use [GNU Compiler Collection](https://gcc.gnu.org/):
 
 ```
 g++ main.cpp; ./a.out; 
