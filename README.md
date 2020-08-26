@@ -1,4 +1,4 @@
-# Space Academy! 🚀 🌎
+# 🚀 🌎 Space Academy!
 
 A text-based game written in C++.
 
